@@ -28,7 +28,7 @@ Upewnij się, że masz zainstalowane na swoim komputerze następujące oprogramo
 
 ## 2. Sklonowanie repozytorium
 
-Aby rozpocząć, sklonuj repozytorium na swoje lokalne urządzenie:
+# Uruchom konsole by postawic server nodejs
 ```bash
 git clone https://github.com/IgorPedz/JzD.git
 
@@ -39,7 +39,7 @@ npm install
 cd desktop/projekt/server
 node server.js
 ```
-## Uruchom kolejną konsole by postawić aplikacje react
+# Uruchom kolejną konsole by postawić aplikacje react
 ```bash
 cd desktop/projekt/src
 npm start
