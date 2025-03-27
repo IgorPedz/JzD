@@ -1,0 +1,191 @@
+.question
+{
+    color:black;
+}
+.question-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 5px 0;
+  font-size: 0.5rem;
+  text-align: left;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.question-table thead {
+  background-color: #333;
+  color: white;
+  text-transform: uppercase;
+}
+
+.question-table thead tr {
+  border-bottom: 3px solid #171717;
+}
+
+.question-table th, .question-table td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.question-table tbody tr {
+  transition: 0.2s ease-in-out;
+}
+
+.question-table tbody tr:hover {
+  background: rgba(0, 123, 255, 0.1);
+}
+
+.true-answer {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.false-answer {
+  color: #dc3545;
+}
+
+.hint {
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+  .question-table {
+    font-size: 14px;
+  }
+  
+  .question-table th, .question-table td {
+    padding: 8px 10px;
+  }
+}
+
+.file
+{
+    text-align: center;
+}
+/* Ukrywamy domyślny przycisk */
+.file-input {
+    display: none;
+  }
+  
+  /* Stylizowanie etykiety (przycisk) */
+  .file-label {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: transparent;
+    color:#333;
+    font-size: 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s;
+  }
+  
+  .file-label:hover {
+    background-color: #45a049;
+    color:snow;
+  }
+  
+  /* Stylizowanie etykiety, gdy plik jest wybrany */
+  .file-input:valid + .file-label {
+    background-color: hsl(120, 100%, 20%);
+  }
+  
+  .file-input:valid + .file-label:hover {
+    background-color: hsl(120, 100%, 15%);
+  }
+.header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info {
+  position: relative;
+  padding: 5px 15px;
+  background-color: transparent;
+  color:#333;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.info:hover
+{
+  color:snow;
+  background-color: orange;
+}
+/* Ukrywanie obrazu i tekstu, gdy nie ma najechania */
+.hover-img {
+  position: absolute;
+  display: none; /* Początkowo ukryte */
+  bottom: -10px; /* Dystans od góry */
+  right:  25px;
+  padding: 5px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10; /* Zapewnia, że element będzie na wierzchu */
+  width: 65vw;
+}
+.import-header
+{
+  display: flex;
+  align-items: center;
+  gap:1rem;
+}
+/* Pokazanie tekstu i obrazu po najechaniu na ikonę */
+.info:hover .hover-img {
+  display: block; /* Pokazuje kontener */
+}
+
+/* Stylowanie dla obrazu */
+.hover-img img {
+  max-width: 65vw;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 5px; /* Dystans między tekstem a obrazkiem */
+  z-index: 10;
+}
+
+.bottom-text
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.questions-del
+{
+  display: inline-block;
+  padding: 5px 10px;
+  color: 333;
+  font-size: 1.25rem;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s;
+}
+.questions-del:hover
+{
+  background-color: hsl(0, 59%, 31%);
+  color:snow;
+}
+.imported-questions
+{
+  max-height:400px;
+}
+li
+{
+  border: none;
+}
+.questions-header
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

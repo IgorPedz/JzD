@@ -1,0 +1,338 @@
+.main-content {
+    background-color: #ffffffe5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    padding: 20px;
+    width:70vw;
+    position: relative;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index:1000;
+    display: flex;
+    gap:3rem;
+}
+
+.game, .games-list {
+    flex: 1;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.game {
+    text-align: center;
+}
+
+.game label, .pools label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #444;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.name-input, .custom-select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.create-game {
+    width: 100%;
+    padding: 12px;
+    background: #333;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    cursor: pointer;
+    transition:0.2s;
+}
+
+.create-game:hover {
+    scale:1.1;
+}
+
+.games-list
+{
+    overflow-y: auto;
+}
+.games-list h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.games-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.games-list li {
+    background: white;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: #555;
+    transition: transform 0.2s ease-in-out;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.games-list li:hover {
+    transform: translateY(-3px);
+    background: #e9ecef;
+}
+
+.no-games {
+    text-align: center;
+    font-size: 18px;
+    color: #777;
+    padding: 10px;
+}
+
+.separator {
+    width: 2px;
+    background: #333;
+    border-radius: 2px;
+}
+
+/* Efekt hover & focus */
+.game-name input:hover,
+.custom-select:hover,
+.game-name input:focus,
+.custom-select:focus {
+    border-color: #666;
+    background: #ffffff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* Nowoczesny styl select */
+.custom-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    cursor: pointer;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23222' width='20px' height='20px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    background-size: 18px;
+    padding-right: 50px;
+}
+
+/* Po najechaniu */
+.custom-select:hover {
+    border-color: #999;
+}
+.delete-game,.admin-game
+{
+    background-color: transparent;
+    transition: 0.2s;
+}
+.delete-game:hover
+{
+    background-color:brown;
+    color:snow;
+}
+.admin-game:hover
+{
+    background-color: orange;
+    color:snow;
+}
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .popup {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 60vw;
+    max-height: 60vh;
+    text-align: center;
+    position: relative;
+    overflow-y: scroll;
+  }
+  
+  .close-popup {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    color: #333;
+    border: none;
+    padding: 5px 7px 5px 7px;
+    cursor: pointer;
+  }
+  .close-popup:hover
+  {
+    background-color: brown;
+    color:snow;
+  }
+  .game-header
+  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+  }
+  .participants-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1rem;
+  }
+  
+  .participants-list li {
+    background: #fff; /* Białe tło */
+    border-radius: 12px; /* Zaokrąglone rogi */
+    padding: 5px 10px;
+    margin-bottom: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1); /* Cień */
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Płynne przejścia */
+    font-size: 8px;
+  }
+  
+  .participants-list li:hover {
+    transform: translateY(-5px); /* Efekt unoszenia */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Cień przy hoverze */
+  }
+  
+  .player-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .player-name {
+    color: #333; /* Kolor imienia i nazwiska */
+    font-size: 12px;
+  }
+  
+  .player-class {
+    color: #777; /* Kolor klasy */
+    font-size: 12px;
+  }
+  
+  .player-stats {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .stat-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .stat-label {
+    color: #777; /* Kolor etykiety */
+    font-size: 14px;
+    margin-right: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .stat-value {
+    font-weight: bold;
+    font-size: 16px;
+    color: #333; /* Kolor wartości */
+  }
+  
+  .stat-item:first-child .stat-value {
+    color: #e74c3c; /* Czerwony kolor dla życia */
+  }
+  
+  .stat-item:last-child .stat-value {
+    color: #2ecc71; /* Zielony kolor dla punktów */
+  }
+  .controller {
+    margin: 20px;
+    padding: 15px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+
+    gap: 15px;
+  }
+  
+  .controller label {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    margin: auto;
+  }
+  
+  .controller select,
+  .controller input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    width: 100%;
+    margin-bottom: 10px;
+    margin: auto;
+  }
+  
+  .controller button {
+    background-color: transparent;
+    color: #333;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    transition: background-color 0.3s ease;
+    font-size: 1rem;
+  }
+  
+  .controller button:hover {
+    background-color: #333;
+    color:snow;
+  }
+  
+  .adjustments {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .adjustments div {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .controller select,
+  .controller input {
+    width: auto;
+    max-width: 300px;
+    margin-bottom: 15px;
+  }
+  .flex-row {
+    display: flex;           /* Ustawia elementy w jednym rzędzie */
+    align-items: center;     /* Wyrównuje elementy w pionie */            /* Odstęp między elementami */
+    justify-content: center;
+  }

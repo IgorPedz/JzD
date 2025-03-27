@@ -1,0 +1,110 @@
+
+.app-container {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+  
+  header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    border-radius: 25px;
+    margin-bottom: 10px;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  nav ul li {
+    display: inline;
+    margin: 0 10px;
+  }
+  
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+  }
+/* Pasek na górze strony */
+.navbar {
+  width: 100%;
+  height: 60px;
+  background-color: #333; /* Tło paska */
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: flex-end; /* Wyrównanie opcji do prawej strony */
+  align-items: center;
+  padding-right: 20px; /* Odstęp od prawej krawędzi */
+  z-index: 1000;
+}
+
+/* Kontener opcji */
+.options {
+  display: flex;
+  gap: 20px; /* Odstęp między opcjami */
+}
+
+/* Opcje */
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  background-color: #555;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.5s ease; /* Animacja transformacji */
+  transform-origin: bottom center; /* Rozciąganie zaczyna się od góry */
+  transform: scaleY(1); /* Początkowy rozmiar */
+  max-width: 30px;
+  color: white;
+  text-decoration: none;
+}
+
+
+/* Efekt wysuwania: opcja pojawia się nad paskiem */
+.option:hover {
+  transform: scaleY(1.2); /* Rozciąganie opcji w pionie */
+  opacity: 1;
+}
+.options
+{
+  display: flex;
+  text-align: right;
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+::-webkit-scrollbar {
+  width: 10px; /* Szerokość pionowego paska */
+  height: 10px; /* Wysokość poziomego paska */
+}
+
+/* Tło paska przewijania */
+::-webkit-scrollbar-track {
+background: #f1f1f1;
+border-radius: 10px;
+}
+
+/* Suwak paska przewijania */
+::-webkit-scrollbar-thumb {
+background: #333;
+border-radius: 10px;
+}
+.logo
+{
+  position: absolute;
+  z-index: -1;
+  top:1vw;  
+  left:3vw;
+  width:30vw;
+}

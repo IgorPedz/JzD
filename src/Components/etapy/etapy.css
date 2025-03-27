@@ -1,0 +1,286 @@
+.etaps
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: #ffffffe5;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.1);
+    padding: 20px;
+    width:80vw;
+    position: relative;
+    max-height: 250px;
+    overflow-y: auto;
+    z-index:1000;
+}
+/* Styl dla przyciemnienia tła */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Przyciemnienie tła */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  .modal-edit-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 75vw;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  /* Styl dla formularza (modal) */
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 250px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* Input styl */
+  .modal-content input {
+    width: 100%;
+    text-align: center;
+    margin-top: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Przycisk zamknięcia */
+  .button-group {
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button-group button {
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  .button-group button {
+    background: transparent;
+    color:#333;
+  }
+
+  .button-group button:first-child:hover {
+    color:snow;
+    background: hsl(120, 100%, 25%);
+  }
+  
+  .button-group button:last-child:hover {
+    color:snow;
+    background: hsl(0, 59%, 40%);
+  }
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+  }
+  h2 {
+    color: #333;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+  }
+  
+  .play {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .play:hover {
+    background: hsl(10, 50%, 95%);
+  }
+  
+  .options {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .options label {
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 5px;
+    transition: transform 0.2s ease-in-out, 0.2s ease-in-out;
+  }
+  
+  .del-pool:hover {
+    background: rgba(220, 53, 69, 0.1);
+    transform: scale(1.1);
+  }
+  
+  .edit-pool,.del-pool {
+    color: #333;
+  }
+  
+  .edit-pool:hover {
+    background: orange;
+    transform: scale(1.1);
+    color:snow;
+  }
+  .del-pool:hover
+  {
+    background: brown;
+    transform: scale(1.1);
+    color:snow;
+  }
+  
+  /* Responsywność */
+  @media (max-width: 768px) {
+    .play {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    .options {
+      margin-top: 10px;
+    }
+  }
+  .create-pool-btn
+  {
+    color:white;
+    background-color: #333;
+    transition: 0.2s;
+    margin: auto;
+  }
+  .create-pool-btn:hover
+  {
+    scale:1.1;
+  }
+  .close-btn
+  {
+    position: absolute;
+    background-color: transparent;
+    font-size: 2rem;
+    top: 8px; 
+    width:50px;
+    right: 20px;
+    padding:5px;
+  }
+  .close-btn:hover
+  {
+    background-color: hsl(0, 59%, 31%);
+    color:snow;
+  }
+  .possible-etaps
+  {
+    display: flex;
+    justify-content: center;
+    gap:1rem;
+  }
+  .possible-etaps {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .possible-etaps li {
+    background: #f8f9fa;
+    padding: 10px 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out, transform 0.2s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+  }
+  
+  .possible-etaps li:hover {
+    background: #e9ecef;
+    transform: scale(1.05);
+  }
+  
+  .possible-etaps li.selected {
+    background: #333;
+    color: white;
+    box-shadow: 0 4px 10px hsl(0, 0%, 25%);
+  }
+  .checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modern-checkbox {
+    display: none;
+}
+
+.modern-checkbox + label {
+    width: 24px;
+    height: 24px;
+    border: 2px solid gray;
+    border-radius: 6px;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modern-checkbox:checked + label {
+    background-color: #333;
+    border-color: #333;
+}
+
+.modern-checkbox:checked + label::after {
+    content: "✔";
+    color: white;
+    font-size: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: bold;
+}
+.selected-questions
+{
+  margin: 10px;
+}
+.stage
+{
+  font-size: 0.5rem;
+}
+.send-button
+{
+  color:white;
+  background-color: #333;
+  transition: 0.2s;
+}
+.send-button:hover
+{
+  scale:1.1;
+}
+  @media (max-width: 768px) {
+    .possible-etaps {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .possible-etaps li {
+      width: 80%;
+      text-align: center;
+    }
+  }
