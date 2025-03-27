@@ -25,7 +25,8 @@ Upewnij się, że masz zainstalowane na swoim komputerze następujące oprogramo
 - [Node.js](https://nodejs.org/) (zalecana wersja: **16.x** lub wyższa)
 - [npm](https://www.npmjs.com/) (zainstalowany automatycznie wraz z Node.js)
 - [xampp] (https://www.apachefriends.org/pl/index.html)
-
+## 1.5 Postaw baze danych mysql
+  Zaimportuj plik JzD.sql do phpmyadmin i stworz potrzebną baze danych
 ## 2. Sklonowanie repozytorium
 
 # Uruchom konsole by postawic serwer nodejs
