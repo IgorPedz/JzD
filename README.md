@@ -30,7 +30,7 @@ Upewnij się, że masz zainstalowane na swoim komputerze następujące oprogramo
 
 Aby rozpocząć, sklonuj repozytorium na swoje lokalne urządzenie:
 ```bash
-git clone https://github.com/TwojeRepozytorium/projekt.git
+git clone https://github.com/IgorPedz/JzD.git
 
 cd desktop/projekt
 
@@ -41,7 +41,7 @@ node server.js
 ```
 ## Uruchom kolejną konsole by postawić aplikacje react
 ```bash
-cd desktop/projekt/front/src
+cd desktop/projekt/src
 npm start
 y
 ```
