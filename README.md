@@ -28,7 +28,7 @@ Upewnij się, że masz zainstalowane na swoim komputerze następujące oprogramo
 
 ## 2. Sklonowanie repozytorium
 
-# Uruchom konsole by postawic server nodejs
+# Uruchom konsole by postawic serwer nodejs
 ```bash
 git clone https://github.com/IgorPedz/JzD.git
 
